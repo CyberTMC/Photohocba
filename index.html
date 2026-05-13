@@ -1,1 +1,571 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    
+    <!-- ========== SEO & SOCIAL MEDIA (Messenger, Zalo, FB) ========== -->
+    <!-- Tiêu đề hiển thị trên tab trình duyệt và khi share link -->
+    <title>Đăng ký photo học bạ 12A2 | Lớp 12</title>
+    
+    <!-- Mô tả ngắn khi gửi link lên Messenger -->
+    <meta name="description" content="📸 Đăng ký photo học bạ lớp 12A2 - Chọn tên và số lượng bản photo. Nhanh chóng, chính xác!">
+    
+    <!-- Open Graph (Facebook, Messenger, Zalo) -->
+    <meta property="og:title" content="Đăng ký photo học bạ 12A2">
+    <meta property="og:description" content="📸 Học sinh lớp 12A2 đăng ký số lượng bản photo học bạ tại đây. Vui lòng chọn đúng tên trong danh sách.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://img.icons8.com/fluency/256/camera.png">
+    <meta property="og:image:alt" content="Đăng ký photo học bạ 12A2">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Photo Học Bạ 12A2">
+    
+    <!-- Twitter Card (hỗ trợ thêm) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Đăng ký photo học bạ 12A2">
+    <meta name="twitter:description" content="Đăng ký số lượng bản photo học bạ cho học sinh lớp 12A2">
+    <meta name="twitter:image" content="https://img.icons8.com/fluency/256/camera.png">
+    
+    <!-- Google Font & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        /* decorative animated circles */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(66,153,225,0.2) 0%, rgba(66,153,225,0) 70%);
+            top: -100px;
+            left: -100px;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(49,130,206,0.15) 0%, rgba(49,130,206,0) 70%);
+            bottom: -150px;
+            right: -150px;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(0px);
+            border-radius: 2rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25), 0 8px 18px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 500px;
+            padding: 2rem 2rem 2.2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.6);
+            z-index: 2;
+            position: relative;
+        }
+
+        /* header section with icon */
+        .header-icon {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .header-icon i {
+            font-size: 3rem;
+            color: #1a73e8;
+            background: linear-gradient(135deg, #eef4ff, #e0eaff);
+            padding: 0.8rem;
+            border-radius: 60px;
+            box-shadow: 0 8px 14px rgba(26,115,232,0.2);
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1a5bbf, #2c7be5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+            letter-spacing: -0.3px;
+            margin-top: 0.25rem;
+        }
+        
+        /* Badge lớp 12A2 */
+        .class-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f5b042, #f59e0b);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            margin-left: 8px;
+            vertical-align: middle;
+            box-shadow: 0 2px 8px rgba(245,158,11,0.3);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #5f6c84;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1.8rem;
+            border-bottom: 1px dashed #cddfe7;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        /* form group */
+        .form-group {
+            margin-bottom: 1.75rem;
+            position: relative;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #1e2a3e;
+            margin-bottom: 0.6rem;
+        }
+
+        label i {
+            color: #2c7be5;
+            font-size: 1rem;
+            width: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 1.2rem;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.25s ease;
+            background-color: #fefefe;
+            color: #0f172a;
+            font-weight: 500;
+            outline: none;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+
+        input:focus {
+            border-color: #2c7be5;
+            box-shadow: 0 0 0 4px rgba(44,123,229,0.15);
+            background-color: #ffffff;
+        }
+
+        input::placeholder {
+            color: #a0afc3;
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+
+        /* custom datalist style */
+        input::-webkit-calendar-picker-indicator {
+            opacity: 0.6;
+            cursor: pointer;
+            filter: invert(0.4);
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button {
+            opacity: 0.5;
+        }
+
+        /* button magic */
+        .btn-submit {
+            width: 100%;
+            background: linear-gradient(105deg, #1a73e8 0%, #2b7eec 100%);
+            border: none;
+            padding: 0.9rem;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            color: white;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-shadow: 0 10px 18px -8px rgba(26,115,232,0.4);
+            margin-top: 0.5rem;
+        }
+
+        .btn-submit i {
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(105deg, #0f66d0, #136fdc);
+            transform: translateY(-2px);
+            box-shadow: 0 18px 25px -12px rgba(26,115,232,0.5);
+        }
+
+        .btn-submit:active {
+            transform: translateY(1px);
+        }
+
+        .btn-submit:disabled {
+            background: #b9d0f0;
+            transform: none;
+            box-shadow: none;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        /* message card */
+        #message {
+            margin-top: 1.8rem;
+            padding: 1rem 1rem;
+            border-radius: 1.2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .success {
+            background: #e6f9ed;
+            color: #0a6e3a;
+            border-left: 5px solid #2b9348;
+            display: flex !important;
+            box-shadow: 0 4px 12px rgba(43,147,72,0.1);
+        }
+
+        .error {
+            background: #fee9e6;
+            color: #bc3900;
+            border-left: 5px solid #e35f21;
+            display: flex !important;
+            box-shadow: 0 4px 12px rgba(227,95,33,0.08);
+        }
+
+        .success i, .error i {
+            font-size: 1.25rem;
+        }
+
+        /* footer hint */
+        .footer-note {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.7rem;
+            color: #8b9ab0;
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            align-items: center;
+        }
+
+        .footer-note i {
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 1.6rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            .btn-submit {
+                padding: 0.8rem;
+            }
+        }
+        
+        .name-hint {
+            font-size: 0.7rem;
+            color: #4b6a9b;
+            margin-top: 0.3rem;
+            margin-left: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-icon">
+        <i class="fas fa-camera-retro"></i>
+    </div>
+    <h2>
+        Đăng ký photo học bạ 
+        <span class="class-badge">12A2</span>
+    </h2>
+    <div style="text-align: center;">
+        <span class="subtitle"></span>
+    </div>
+
+    <div class="form-group">
+        <label><i class="fas fa-user-graduate"></i> Họ và tên (học sinh 12A2)</label>
+        <input type="text" id="name" list="name-list" placeholder="Nhập hoặc chọn tên từ danh sách lớp..." autocomplete="off">
+        <datalist id="name-list">
+            <option value="Nguyễn Thị Ngọc Anh">
+            <option value="Trần Hoàng Anh">
+            <option value="Vũ Lâm Anh">
+            <option value="Trần Thị Ngọc Ánh">
+            <option value="Nguyễn Thị Quỳnh Chi">
+            <option value="Trần Minh Chuyên">
+            <option value="Nguyễn Đức Đại">
+            <option value="Ngô Anh Đức">
+            <option value="Nguyễn Thị Hương Giang">
+            <option value="Nguyễn Đức Hoàng Hải">
+            <option value="Nguyễn Bảo Hân">
+            <option value="Đào Ngọc Minh Hằng">
+            <option value="Hồ Bảo Hoàng">
+            <option value="Nguyễn Thị Thuý Hồng">
+            <option value="Trần Thị Huyền">
+            <option value="Dương Thị Mai Lan">
+            <option value="Lê Thị Linh">
+            <option value="Nguyễn Diệu Linh">
+            <option value="Trần Kiều Linh">
+            <option value="Nguyễn Phú Nghĩa">
+            <option value="Nguyễn Vân Nhi">
+            <option value="Nguyễn Hồng Nhung A">
+            <option value="Nguyễn Hồng Nhung B">
+            <option value="Nguyễn Minh Phương">
+            <option value="Hoàng Đắc Quân">
+            <option value="Nguyễn Tiến Quốc">
+            <option value="Vi Thị Tú Quyên">
+            <option value="Nguyễn Thị Như Quỳnh">
+            <option value="Trịnh Thị Quỳnh">
+            <option value="Vũ Xuân Sáng">
+            <option value="Đặng Minh Sơn">
+            <option value="Trần Văn Sơn">
+            <option value="Dương Thị Như Tâm">
+            <option value="Lê Thị Mỹ Tâm">
+            <option value="Nguyễn Minh Tân">
+            <option value="Phạm Anh Thư">
+            <option value="Nguyễn Hưng Thịnh">
+            <option value="Trương Thị Thuý">
+            <option value="Nguyễn Đức Trường">
+            <option value="Nguyễn Anh Tuấn">
+            <option value="Nguyễn Thị Tố Uyên">
+            <option value="Nguyễn Thu Uyên">
+            <option value="Nguyễn Hà Vi">
+            <option value="Nguyễn Thị Khánh Vi">
+            <option value="Nguyễn Hải Yến">
+            <option value="Nguyễn Thị Hải Yến">
+            <option value="Nguyễn Cao Triệu Ngọc">
+        </datalist>
+        <div class="name-hint"><i class="fas fa-chevron-circle-down"></i> Chọn đúng tên trong danh sách 12A2</div>
+    </div>
+
+    <div class="form-group">
+        <label><i class="fas fa-copy"></i> Số lượng bản photo</label>
+        <input type="number" id="quantity" min="1" placeholder="Nhập số lượng (tối thiểu 1)" value="">
+    </div>
+
+    <button class="btn-submit" id="submitBtn" onclick="sendData()">
+        <i class="fas fa-check-circle"></i> Xác nhận đăng ký
+    </button>
+
+    <div id="message"></div>
+    <div class="footer-note">
+    <i class="fas fa-shield-alt"></i> <span>ibox nếu có lỗi !</span>
+        <i class="fas fa-id-card"></i>
+    </div>
+</div>
+
+<script>
+    // DOM elements
+    const nameInput = document.getElementById('name');
+    const quantityInput = document.getElementById('quantity');
+    const submitBtn = document.getElementById('submitBtn');
+    const messageDiv = document.getElementById('message');
+
+    // URL Google Apps Script (giữ nguyên)
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzscbixGEMsVJx3fWfaGY5nPDaKE2Aba_nmpKzDr8JSeaPsezBgcDRlei1YnI2VQJJq/exec';
+
+    // Helper: hiển thị thông báo
+    function showMessage(text, type) {
+        messageDiv.className = ''; 
+        messageDiv.innerHTML = ''; 
+        const icon = document.createElement('i');
+        if (type === 'success') {
+            icon.className = 'fas fa-check-circle';
+        } else {
+            icon.className = 'fas fa-exclamation-triangle';
+        }
+        const span = document.createElement('span');
+        span.innerText = text;
+        messageDiv.appendChild(icon);
+        messageDiv.appendChild(span);
+        messageDiv.classList.add(type);
+        messageDiv.style.display = 'flex';
+        if (type === 'success') {
+            setTimeout(() => {
+                if (messageDiv.classList.contains('success')) {
+                    messageDiv.style.display = 'none';
+                }
+            }, 5000);
+        }
+    }
+
+    function clearMessage() {
+        messageDiv.style.display = 'none';
+        messageDiv.className = '';
+        messageDiv.innerHTML = '';
+    }
+
+    async function sendData() {
+        let fullName = nameInput.value.trim();
+        let quantityRaw = quantityInput.value.trim();
+
+        if (!fullName) {
+            showMessage("⚠️ Vui lòng nhập họ và tên (hoặc chọn từ danh sách 12A2)!", "error");
+            nameInput.focus();
+            return;
+        }
+        if (!quantityRaw) {
+            showMessage("⚠️ Vui lòng nhập số lượng bản photo!", "error");
+            quantityInput.focus();
+            return;
+        }
+        const quantity = Number(quantityRaw);
+        if (isNaN(quantity) || quantity < 1) {
+            showMessage("⚠️ Số lượng bản photo phải là số nguyên dương (tối thiểu 1).", "error");
+            quantityInput.value = '';
+            quantityInput.focus();
+            return;
+        }
+        if (quantity > 200) {
+            showMessage("⚠️ Số lượng tối đa 200 bản, vui lòng liên hệ hỗ trợ nếu cần thêm.", "error");
+            return;
+        }
+
+        submitBtn.disabled = true;
+        const originalBtnHTML = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Đang xử lý...';
+        clearMessage();
+
+        try {
+            const requestUrl = `${SCRIPT_URL}?name=${encodeURIComponent(fullName)}&quantity=${encodeURIComponent(quantity)}&class=12A2`;
+            const response = await fetch(requestUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+                },
+                mode: 'cors'
+            });
+            
+            const resultText = await response.text();
+            
+            if (resultText.includes("Thành công") || resultText.toLowerCase().includes("success") || (response.ok && !resultText.includes("lỗi"))) {
+                let successMsg = resultText.length < 100 ? resultText : "✅ Đăng ký thành công! Cảm ơn bạn đã đăng ký photo học bạ 12A2.";
+                showMessage(`✅ ${successMsg}`, "success");
+                nameInput.value = '';
+                quantityInput.value = '';
+                nameInput.focus();
+            } else {
+                let errorMsg = resultText.includes("lỗi") ? resultText : "Đã có lỗi xảy ra từ hệ thống, vui lòng thử lại.";
+                showMessage(`❌ ${errorMsg}`, "error");
+            }
+        } catch (error) {
+            console.error("Fetch error:", error);
+            showMessage("❌ Lỗi kết nối mạng hoặc máy chủ không phản hồi. Kiểm tra kết nối internet hoặc thử lại sau.", "error");
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHTML;
+        }
+    }
+
+    // Enter key support
+    const inputFields = [nameInput, quantityInput];
+    inputFields.forEach(field => {
+        field.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                if (!submitBtn.disabled) {
+                    sendData();
+                }
+            }
+        });
+    });
+
+    nameInput.addEventListener('blur', function() {
+        if (this.value.trim() === "") this.value = "";
+    });
+    
+    quantityInput.addEventListener('focus', () => {
+        if(quantityInput.value === "") quantityInput.placeholder = "Nhập số lượng (vd: 5)";
+    });
+    quantityInput.addEventListener('blur', () => {
+        if(quantityInput.value === "") quantityInput.placeholder = "Nhập số lượng (tối thiểu 1)";
+        else {
+            let q = parseInt(quantityInput.value);
+            if(!isNaN(q) && q < 1) quantityInput.value = 1;
+        }
+    });
+
+    quantityInput.addEventListener('input', function(e) {
+        let val = e.target.value;
+        if(val !== "") {
+            let num = Number(val);
+            if(isNaN(num)) {
+                quantityInput.value = "";
+                showMessage("⚠️ Vui lòng nhập số lượng hợp lệ (số nguyên).", "error");
+                setTimeout(() => {
+                    if(messageDiv.classList.contains('error')) messageDiv.style.display = 'none';
+                }, 2000);
+            } else if(num < 1 && val !== "") {
+                quantityInput.value = 1;
+                showMessage("Số lượng tối thiểu là 1, đã tự động điều chỉnh.", "error");
+                setTimeout(() => {
+                    if(messageDiv.classList.contains('error')) messageDiv.style.display = 'none';
+                }, 2000);
+            } else if(num > 200) {
+                quantityInput.value = 200;
+                showMessage("Số lượng tối đa 200 bản, đã giới hạn.", "error");
+                setTimeout(() => {
+                    if(messageDiv.classList.contains('error')) messageDiv.style.display = 'none';
+                }, 2000);
+            }
+        }
+    });
+</script>
+</body>
+</html>
